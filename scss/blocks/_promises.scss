@@ -1,0 +1,129 @@
+.promises {
+    position: relative;
+
+        &__image {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 540px;
+        }
+            &__main {
+                top: 45px;
+                left: 400px;
+                position: absolute;
+                background: $blue-deep;
+                opacity: 0.9;
+                gap: 70px;
+                padding: 75px 0 75px 70px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                'first second'
+                'third button';
+            }
+                &__item-first {
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 100%;
+                    max-width: 300px;
+                    grid-area: first;
+                }
+                    &__item-second {
+                        flex-direction: column;
+                        gap: 10px;
+                        width: 100%;
+                        max-width: 300px;
+                        grid-area: second;
+                    }
+                        &__item-third {
+                            flex-direction: column;
+                            gap: 10px;
+                            width: 100%;
+                            max-width: 300px;
+                            grid-area: third;
+                        }
+                            &__button {
+                                width: 100%;
+                                max-width: 300px;
+                                grid-area: button;
+                                border: 1px solid #515773;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                                &__button:hover {
+                                    border: 1px solid #53F3CD;
+                                }
+                                    &__button-link {
+                                        text-decoration: none;
+                                        font-family: $font-primary;
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        font-size: 20px;
+                                        line-height: 20px;
+                                        letter-spacing: 0.08em;
+                                        text-transform: uppercase;
+                                        color: $secondary;
+                                        position: relative;
+                                        -webkit-transition: all 1s ease;
+                                        transition: all 1s ease;
+                                    }
+                                        &__button-link:hover {
+                                            text-shadow: 28px 21px 5px rgba(0, 77, 0, 1);
+                                        }
+                                            &__item-name {
+                                                font-family: $font-secondary;
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 24px;
+                                                line-height: 48px;
+                                                color: $white-default;
+                                            }
+}
+
+.promises__button-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    left: 8%;
+    top: 50%;
+    background: #85BBB1;
+    opacity: 0.3;
+}
+
+.promises__button-link:hover:after {
+    display: none;
+}
+
+@media screen and (max-width: 1180px) and (min-width: 769px) {
+    .promises__main {
+        left: 50px;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .promises__main {
+        left: 50px;
+    }
+}
+@media screen and (max-width: $sm) {
+    .promises__image {
+        background-image: url(../img/promises-imagee.jpg);
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+        .promises__image-display {
+            display: none;
+        }
+            .promises__main {
+                left: 10px;
+                gap: 20px;
+                padding: 10px;
+                top: 13px;
+                left: 6%;
+                width: 280px
+            }
+                .promises__button-link {
+                    font-size: 18px;
+                }
+}

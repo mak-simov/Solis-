@@ -1,0 +1,43 @@
+.footer {
+    justify-content: space-between;
+    border-top: 1px solid #515773;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+        &__text {
+            font-family:$font-primary;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 26px;
+            color: $white-default;
+            opacity: 0.6;
+        }
+            &__made-by {
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+            }
+                &__agreement {
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+                }
+                    &__link {
+                        text-decoration: none;
+                        font-family: $font-primary;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 24px;
+                        letter-spacing: 0.08em;
+                        color: $white-default;
+                    }
+}
+@media screen and (max-width: $sm) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,180 @@
+.info {
+    padding-bottom: 120px;
+    position: relative;
+
+        &__image {
+            width: 100%;
+            max-width: 570px;
+            height: 670px;
+            position: relative;
+        }
+            &__main {
+                position: absolute;
+                top: 45px;
+                left: 400px;
+                width: 100%;
+                max-width: 770px;
+                height: 580px;
+                padding-top: 45px;
+                justify-content: space-between;
+                background: $blue-deep;
+                opacity: 0.9;
+            }
+                &__text {
+                    flex-direction: column;
+                    width: 100%;
+                    max-width: 389px;
+                    font-family: $font-primary;
+                    font-weight: 300;
+                    font-style: normal;
+                    line-height: 26px;
+                    font-size: 18px;
+                    color: $white-default;
+                    opacity: 0.8;
+                    gap: 50px;
+                    
+                }
+                    &__statistic {
+                        text-align: center;
+                        flex-direction: column;
+                        gap: 40px;
+                        padding-left: 55px;
+                    }
+                        &__statistic-general {
+                            position: relative;
+                        }
+                            &__statistic-description {
+                                padding-top: 12px;
+                                padding-bottom: 40px;
+                                font-family: $font-primary;
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 18px;
+                                line-height: 26px;
+                                color: $white-default;
+                                opacity: 0.8;
+                            }
+                                &__button-link {
+                                    text-decoration: none;
+                                    font-family: $font-secondary;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    font-size: 20px;
+                                    line-height: 20px;
+                                    letter-spacing: 0.08em;
+                                    text-transform: uppercase;
+                                    color: $secondary;
+                                    position: relative;
+                                    -webkit-transition: all 1s ease;
+                                    transition: all 1s ease;
+                                }
+                                    &__button-link:hover {
+                                        text-shadow: 28px 21px 5px rgba(0, 77, 0, 1);
+                                    }
+}
+
+.info__statistic-general::after {
+    content: '';
+    position: absolute;
+    width: 38%;
+    height: 1px;
+    left: 32%;
+    top: 100%;
+    background: #85BBB1;
+}
+
+.info__button-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    left: 8%;
+    top: 50%;
+    background: #85BBB1;
+    opacity: 0.3;
+    transform: translate(0.5);
+}
+
+.info__button-link:hover:after{
+    display: none;
+}
+
+.sum{
+    font-family: $font-secondary;
+    font-style: normal;
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 72px;
+    color: $white-default;
+}
+
+.dollar {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+@media screen and (max-width: 1180px) and (min-width: 769px) {
+    .info__main {
+        left: 50px;
+        max-width: 650px;
+    }
+        .sum {
+            font-size: 50px;
+        }
+}
+
+@media screen and (max-width: $md) {
+    .info__main {
+        left: 50px;
+        max-width: 650px;
+    }
+        .sum {
+            font-size: 50px;
+        }
+}
+@media screen and (max-width: $sm) {
+    .info__main {
+        flex-direction: column;
+        justify-content: center;
+        top: 10px;
+        left: 6%;
+        max-width: 280px;
+        padding-top: 0px;
+        height: 100%;
+    }
+        .info__text {
+            gap: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+            .info__statistic {
+                padding-left: 0px;
+                gap: 5px;
+                background: none;
+            }
+                .info__statistic-description {
+                    padding-bottom: 12px;
+                }
+                    .sum {
+                        font-size: 30px;
+                        line-height: 50px;
+                    }
+                        .dollar {
+                            font-size: 30px;
+                            line-height: 40px;
+                        }
+                            .info__image {
+                                background-image: url(../img/info-block.jpg) ;
+                                background-repeat: no-repeat;
+                                object-fit: cover;
+                            }
+                                .info__image-display {
+                                    display: none;
+                                }
+                                    .info__button-link {
+                                        font-size: 18px;
+                                    }
+}

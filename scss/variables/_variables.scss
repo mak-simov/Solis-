@@ -1,0 +1,20 @@
+/***** Fonts *****/
+$font-primary:'Lato', sans-serif;
+$font-secondary:'Playfair Display', serif;
+
+/***** Colors *****/
+$white-default:  #FFFFFF;
+$secondary: #53F3CD;
+$primary: #689FF2;
+$blue-deep: #161926;
+
+/***** Width *****/
+$width: 1440px;
+$content-width: 1170px;
+
+/********  Breakpoints ******/
+$lg: 1440px;
+$md: 768px;
+$md-max: $lg - 1;
+$sm: 320px;
+$sm-max: $md - 1;

@@ -1,0 +1,70 @@
+
+.video {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+        &__tablet {
+            position: relative;
+            width: 100%;
+            max-width: 970px;
+            height: 601px;
+            background-image: url(../img/screensaver-for-video.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            align-items: center;
+            justify-content: center;
+        }
+            &__icon-play {
+                position: absolute;
+                top: 40%;
+            }
+                &__play-link {
+                    text-decoration: none;
+                }
+                    &__text {
+                        width: 100%;
+                        max-width: 970px;
+                    }
+                        &__main-text {
+                            font-family: $font-secondary;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 40px;
+                            line-height: 48px;
+                            color: $white-default;
+                            padding-bottom: 20px;
+                            padding-top: 50px;
+                        }
+                            &__description {
+                                width: 100%;
+                                max-width: 800px;
+                            }
+}
+@media screen and (max-width: $md) {
+    .video__tablet {
+        background-size: contain;
+        max-height: 435px;
+    }
+        .video__icon-play {
+            top: 35%;
+        }
+}
+@media screen and (max-width: $sm) {
+    .video {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+        .video__tablet {
+            max-height: 186px;
+        }
+            .video__icon-play {
+                top: 18%;
+            }
+                .video__main-text {
+                    font-size: 30px;
+                    line-height: 38px;
+                }
+}

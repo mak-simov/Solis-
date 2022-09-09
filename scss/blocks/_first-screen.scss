@@ -1,0 +1,92 @@
+.first-screen {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 150px;
+    padding-bottom: 154px;
+
+        &__text-container {
+            width: 100%;
+            max-width: 520px;
+        }
+            &__title {
+                font-family: $font-secondary;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 44px;
+                line-height: 52px;
+                color: $white-default;
+            }
+                &__description {
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 26px;
+                    color: #FFFFFF;
+                    opacity: 0.8;
+                    padding-top: 20px;
+                    padding-bottom: 50px;
+                }
+                    &__button {
+                        position: relative;
+                    }
+                        &__button-link {
+                            position: relative;
+                            text-decoration: none;
+                            font-family: $font-secondary;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 20px;
+                            letter-spacing: 0.08em;
+                            text-transform: uppercase;
+                            color: $secondary;
+                            -webkit-transition: all 1s ease;
+                            transition: all 1s ease;
+                        }
+                            &__button-link:hover {
+                                text-shadow: 28px 21px 5px rgba(0, 77, 0, 1);
+                            }
+}
+
+.first-screen__button-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    left: 8%;
+    top: 50%;
+    background: #85BBB1;
+    opacity: 0.3;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.first-screen__button-link:hover::after {
+    content: '';
+    display: none;
+}
+
+.blue-italic {
+    color: $primary;
+    font-style: italic;
+}
+
+@media screen and (max-width: $sm) {
+    .first-screen {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+        .first-screen__button-link {
+            font-size: 18px;
+        }
+            .first-screen__description {
+                font-size: 16px;
+                line-height: 24px;
+                padding-bottom: 20px;
+            }
+                .first-screen__title {
+                    font-size: 34px;
+                    line-height: 42px;
+                }
+}

@@ -1,0 +1,70 @@
+.body {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: $blue-deep;
+}
+
+.body__background {
+    background-image: url(../img/first-screen-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1048px;
+}
+
+.container {
+    width: 100%;
+    max-width: $content-width;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.description-style {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color: $white-default;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1180px) and (min-width: 769px) {
+    .container {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .container {
+        width: 100%;
+        max-width: $md;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+@media screen and (max-width: $sm) {
+    .container {
+        width: 100%;
+        max-width: $sm;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+        .description-style {
+            font-size: 16px;
+            line-height: 24px;
+        }
+}
